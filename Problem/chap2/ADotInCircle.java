@@ -12,7 +12,7 @@ public class ADotInCircle {
         double x2 = scanner.nextDouble();
         double y2 = scanner.nextDouble();
 
-        double distance = Math.sqrt(Math.pow((x - x2), 2) + Math.pow((y - y2), 2));
+        double distance = Math.sqrt(Math.pow((x - x2), 2) + Math.pow((y - y2), 2)); // sqrt = 루트, pow = 제곱
 
         if (radius > distance) {
             System.out.println("점 (" + x2 + ", " + y2 + ")는 원 안에 있습니다.");
