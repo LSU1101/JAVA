@@ -14,7 +14,7 @@ public class RSP {
 
         if (playerA.equals("가위")) {
             switch (playerB) {
-                case "가위":
+                case "가위" // k
                     winner = 0; // draw
                     break;
                 case "바위":
