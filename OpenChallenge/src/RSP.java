@@ -8,7 +8,7 @@ public class RSP {
         System.out.println("가위바위보 게임입니다. 가위, 바위, 보 중에서 입력하세요.");
 
         System.out.print("철수 >> ");
-        playerA = scanner.next();
+        playerA = scanner.next();//ghj
         System.out.print("영희 >> ");
         playerB = scanner.next();
 
