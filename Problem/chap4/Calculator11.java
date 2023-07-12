@@ -92,5 +92,6 @@ public class Calculator11 {
             }
             break;
         }
+        scanner.close();
     }
 }
