@@ -69,7 +69,7 @@ public class WordGameApp {
                 System.out.print(players[currentPlayer].getName() + "이 졌습니다."); // 두 문자가 서로 다르다면 패배.
                 scanner.close();
                 break;
-            } else  {
+            } else {
                 currentPlayer++; // 같다면 통과.
                 previousWord = word; // 현재 플레이어에게 입력받은 단어와 다음 플레이어가 입력할 단어를 비교하기 위해 previousWord를 변경.
             }
