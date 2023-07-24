@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -104,6 +105,7 @@ public class BearFishGame {
         Fish fish = new Fish(5, 5, 1);
         char[][] board = new char[10][20];
 
+        System.out.println("게임 시작");
         while (true) {
             for (int y = 0; y < board.length; y++) {
                 for (int x = 0; x < board[y].length; x++) {
