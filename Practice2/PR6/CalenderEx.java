@@ -1,0 +1,56 @@
+import java.util.Calendar;
+
+public class CalenderEx {
+    public static void printCalender(String msg, Calendar calendar) {
+        int year = calendar.get(Calendar.YEAR);
+        int month = calendar.get(Calendar.MONTH);
+        int day = calendar.get(Calendar.DAY_OF_MONTH);
+        int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
+        int hour = calendar.get(Calendar.HOUR);
+        int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+        int ampm = calendar.get(Calendar.AM_PM);
+        int minute = calendar.get(Calendar.MINUTE);
+        int second = calendar.get(Calendar.SECOND);
+        int millisecond = calendar.get(Calendar.MILLISECOND);
+        System.out.print(msg + year + "/" + month + "/" + day + "/");
+
+        switch (dayOfWeek) {
+            case Calendar.SUNDAY:
+                System.out.print("일요일"); break;
+            case Calendar.MONDAY:
+                System.out.print("월요일"); break;
+            case Calendar.TUESDAY:
+                System.out.print("화요일"); break;
+            case Calendar.WEDNESDAY:
+                System.out.print("수요일"); break;
+            case Calendar.THURSDAY:
+                System.out.print("목요일"); break;
+            case Calendar.FRIDAY:
+                System.out.print("금요일"); break;
+            case Calendar.SATURDAY:
+                System.out.print("토요일"); break;
+        }
+
+        System.out.print("(" + hourOfDay + "시)");
+        if (ampm == Calendar.AM) {
+            System.out.print("오전");
+        } else {
+            System.out.print("오후");
+        }
+
+        System.out.println(hour + "시 " + minute + "분 " + second + "초 " + millisecond + "밀리초");
+    }
+
+    public static void main(String[] args) {
+        Calendar now = Calendar.getInstance();
+        printCalender("현재 ", now);
+
+        Calendar firstDate = Calendar.getInstance();
+        firstDate.clear();
+        firstDate.set(2016, 11, 25);
+
+        firstDate.set(Calendar.HOUR_OF_DAY, 20);
+        firstDate.set(Calendar.MINUTE, 30);
+        printCalender("처음 데이트한 날은 ", firstDate);
+    }
+}
