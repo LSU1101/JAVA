@@ -27,11 +27,12 @@ class Student {
 
 public class StudentArrayList {
     Scanner scanner = new Scanner(System.in);
-    private ArrayList<Student> students = new ArrayList<Student>();
+    ArrayList<Student> students = new ArrayList<Student>();
     public void run() {
         input();
         printStudent();
         search();
+        scanner.close();
     }
 
     void input() {
